@@ -3,7 +3,7 @@
 C++ game about university campus life. 关于大学校园生活的c++小游戏
 
 ## 作品介绍 Introduction
-作品《大学轻松么》是一款基于对话框的MFC应用程序，为剧中人项目小组，在Microsoft Visual Studio 2010开发环境中，使用静态库中的MFC和几个动态链接库，历时近两个月共同讨论研究开发而成的。</br>
+作品《大学轻松么》（Campus-life）是一款基于对话框的MFC应用程序，为剧中人项目小组，在Microsoft Visual Studio 2010开发环境中，使用静态库中的MFC和几个动态链接库，历时近两个月共同讨论研究开发而成的。</br>
 软件原型包含：</br>
 大学轻松么.exe</br>
 load.dll</br>

@@ -1,2 +1,5 @@
-# Campus-Life
-C++ game about university campus life. 关于大学校园生活的c++小游戏
+# The code of Campus-Life
+
+这里有一些简单的代码demo供浏览
+
+完整代码以及想要进行游玩的请使用百度网盘进行下载：https://pan.baidu.com/s/1Te6A2xpzcvmVWLcgUIlrxQ 提取码:9mvo

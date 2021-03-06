@@ -39,4 +39,10 @@ z3.dat（存档3）<\br>
 
 ## 游戏截图 Screenshots
 
-[!Avatur]
+![avatar](/images/interface.png)
+![avatar](/images/archive.png)
+![avatar](/images/img1.png)
+![avatar](/images/img2.png)
+![avatar](/images/img3.png)
+![avatar](/images/img4.png)
+![avatar](/images/img5.png)

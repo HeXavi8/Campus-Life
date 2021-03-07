@@ -37,7 +37,7 @@ z3.dat（存档3）</br>
 按12345      进行选择</br>
 按ESC        各种返回</br>
 
-## 游戏截图 Screenshots
+## 游戏截图 Game Screenshot
 
 ![avatar](/images/interface.png)
 ![avatar](/images/archive.png)

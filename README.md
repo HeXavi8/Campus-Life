@@ -50,7 +50,6 @@ Of course, this idea is a bit fanciful and too ambitious hahahahaha. Well, this 
 按F6 显示帮助</br>
 按F5 存档</br>
 按F7 开挂！</br>
-
 按AD或←→  前进或后退一幕</br>
 按12345      进行选择</br>
 按ESC        各种返回</br>
@@ -61,7 +60,6 @@ Press F4 to switch map mode (from 2D map to 3D map) </br>
 Press F6 to show help </br>
 Press F5 to archive </br>
 Press F7 to skip! </br>
-
 Press AD or ←→ go forward or backward </br>
 Press 12345 to select </br>
 Press ESC  to return </br>

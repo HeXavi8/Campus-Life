@@ -38,9 +38,9 @@ Z3.dat (File 3) </br>
 当然这个想法有点异想天开过于远大了哈哈哈哈哈，这仅仅是一群大一新生刚学习c++所做的小项目，不过也算是我们一点小小的尝试吧。</br>
 
 Campus-Life is a ”realistic“ game. </br>
-In China, high school teachers often told us: "When you get to university, life will be more 'easier' than in high school." </br>
-Taking this as a starting point, this game, as a small sample, will simply show the whole process of undergraduates from admission to graduation. With more elements of "college life", it will describe the growth story of undergraduates, as well as their understanding and perception of college life. </br>
-We hope to let the players who did not go to college know what the college life is, let the players who are now in the college have a clearer understanding of the college life, let the players who have graduated for many years recall their college time. </br>
+In China, high school teachers often told us: "When you get to university, life will be more 'easier' of that in high school." </br>
+Taking this as a starting point, this game, as a small sample, will simply show the whole process of undergraduates from admission to graduation. With more elements of "college life", the game will describe the growth story of undergraduates, as well as their understanding and perception of college life. </br>
+We hope to let the players who will go to college know what the college life is, let the players who are now in the college have a clearer understanding of the college life, let the players who have graduated for many years recall their college time. </br>
 Of course, this idea is a bit fanciful and too ambitious hahahahaha. Well, this is just a small project done by a group of freshmen who just learned C++, but it can be regarded as our little attempt. </br>
 
 ## 操作说明 Operating instructions

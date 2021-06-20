@@ -38,11 +38,12 @@ z3.dat（存档3）</br>
 打开Debug文件夹，点击 “大学轻松么.exe” 然后就可以进行游玩了。</br>
 
 ## 部分代码 <a name="部分代码"></a>
-* [game.cpp](examples/game.cpp)
-* [storage.cpp](examples/storage.cpp)
-* [word.cpp](examples/word.cpp)
-* [data.cpp](examples/data.cpp)
-* [MAINDlg.h](examples/MAINDlg.h)
+* [game.cpp](../examples/game.cpp)
+* [storage.cpp](../examples/storage.cpp)
+* [word.cpp](../examples/word.cpp)
+* [data.cpp](../examples/data.cpp)
+* [sound.cpp](../examples/sound.cpp)
+* [MAINDlg.h](../examples/MAINDlg.h)
 
 ## 操作说明 <a name="操作说明"></a>
 按F2 直接进入下一周</br>

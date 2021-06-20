@@ -5,13 +5,15 @@ Chinese version of introduction, please refer to [中文介绍](https://github.c
 
 ## Table of Contents
 
-- [Introduction](#Introduction)
-- [Development Purpose](#Development)
-- [Installation](#Installation)
-- [Examples](#Examples)
-- [Operation Instructions](#Operation)
-- [Game Screenshot](#Screenshot)
-- [License](#License)
+- [Campus-Life](#campus-life)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction <a name="Introduction"></a>](#introduction-)
+  - [Development Purpose <a name="Development"></a>](#development-purpose-)
+  - [Installation <a name="Installation"></a>](#installation-)
+  - [Examples <a name="Examples"></a>](#examples-)
+  - [Operation Instructions <a name="Operation"></a>](#operation-instructions-)
+  - [Game Screenshot <a name="Screenshot"></a>](#game-screenshot-)
+  - [License <a name="License"></a>](#license-)
 
 
 ## Introduction <a name="Introduction"></a>
@@ -40,12 +42,12 @@ For the whole project please use baiduyun to download: https://pan.baidu.com/s/1
 Open the folder of "Debug", click "大学轻松么.exe" to start the game.</br>
 
 ## Examples <a name="Examples"></a>
-* [game.cpp](examples/game.cpp)
-* [storage.cpp](examples/storage.cpp)
-* [word.cpp](examples/word.cpp)
-* [data.cpp](examples/data.cpp)
-* [sound.cpp](examples/sound.cpp)
-* [MAINDlg.h](examples/MAINDlg.h)
+* [game.cpp](/game.cpp)
+* [storage.cpp](/storage.cpp)
+* [word.cpp](/word.cpp)
+* [data.cpp](/data.cpp)
+* [sound.cpp](/sound.cpp)
+* [MAINDlg.h](/MAINDlg.h)
 
 ## Operation Instructions <a name="Operation"></a>
 Press F2 to go to next week </br>

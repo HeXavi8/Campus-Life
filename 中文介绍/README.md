@@ -41,6 +41,8 @@ z3.dat（存档3）</br>
 * [game.cpp](examples/game.cpp)
 * [storage.cpp](examples/storage.cpp)
 * [word.cpp](examples/word.cpp)
+* [data.cpp](examples/data.cpp)
+* [MAINDlg.h](examples/MAINDlg.h)
 
 ## 操作说明 <a name="操作说明"></a>
 按F2 直接进入下一周</br>

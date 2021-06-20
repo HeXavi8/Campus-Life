@@ -6,10 +6,10 @@ Chinese version of introduction, please refer to [中文介绍](https://github.c
 ## Table of Contents
 
 * [Introduction](#Introduction)
-* [Development purpose](#Development)
+* [Development Purpose](#Development)
 * [Installation](#Installation)
 * [Examples](#Examples)
-* [Operation instructions](#Operation)
+* [Operation Instructions](#Operation)
 * [Game Screenshot](#Screenshot)
 * [License](#License)
 
@@ -27,7 +27,7 @@ zzz.dat (basic information) </br>
 Z1.dat (File 1) </br>
 Z2.dat (File 2) </br>
 Z3.dat (File 3) </br>
-## Development purpose <a name="Development"></a>
+## Development Purpose <a name="Development"></a>
 
 Campus-Life is a ”realistic“ game. </br>
 In China, high school teachers often told us: "When you get to university, life will be more 'easier' than that in high school." </br>
@@ -44,7 +44,7 @@ Open the folder of "Debug", click "大学轻松么.exe" to start the game.</br>
 * [storage.cpp](examples/storage.cpp)
 * [word.cpp](examples/word.cpp)
 
-## Operation instructions <a name="Operation"></a>
+## Operation Instructions <a name="Operation"></a>
 Press F2 to go to next week </br>
 Press F3 to display the associated properties </br>
 Press F4 to switch map mode (from 2D map to 3D map) </br>

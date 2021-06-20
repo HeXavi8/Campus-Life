@@ -1,12 +1,13 @@
+
 //storage.cpp
 #include "stdafx.h"
-#include "å¤§å­¦è½»æ¾ä¹ˆ.h"
+#include "´óÑ§ÇáËÉÃ´.h"
 #include "MAINDlg.h"
 
 void CMAINDlg::storage_initialization()
 {
 	window=1;  KillTimer(1);
-	storage_type=0;  //åˆ¤æ–­æ˜¯æ¡£æ¡ˆè¿˜æ˜¯æˆå°±
+	storage_type=0;  //ÅĞ¶ÏÊÇµµ°¸»¹ÊÇ³É¾Í
 	sound_control();
 }
 

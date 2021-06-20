@@ -36,9 +36,7 @@ void CMAINDlg::get_data1(int num)
 				else if(t1==6)perseverance=k1;
 				else if(t1==7)EQ=k1;
 				else if(t1==8)moral=k1;
-				else if(t1>=9&&t1<=158)story[t1-9].state=k1;
-				else if(t1>=159&&t1<=178)logic[t1-159]=k1;
-				else if(t1==179)cgl=k1;
+				else if(t1>=9&&t1<=108)story[t1-9].state=k1;
 				k1=0;
 			}
 		}
@@ -62,17 +60,11 @@ void CMAINDlg::give_data1(int num)
 
 	CString str_content1,str;
 	str_content1.Format("%d %d %d %d %d %d %d %d ",day,energy,energy_limit,SAN,wisdom,perseverance,EQ,moral);
-	for(int i=0;i<150;i++) //从0到149的事件赋值
+	for(int i=0;i<100;i++) //从0到99的事件赋值
 	{
 		str.Format("%d ",story[i].state);
 		str_content1+=str;
 	}
-	for(int i=0;i<20;i++) //从0到19的logic赋值
-	{
-		str.Format("%d ",logic[i]);
-		str_content1+=str;
-	}
-	str.Format("%d ",cgl);  str_content1+=str;
 	CFile file2(_T(str_path2),CFile::modeCreate|CFile::modeWrite);
 	file2.Write(str_content1,str_content1.GetLength());
 	file2.Close();
@@ -92,7 +84,7 @@ void CMAINDlg::get_data0()
 	if(stat(str_path,&filestat))  //新建zzz.dat，初始化数据并give_data0()
 	{
 		CStdioFile file(str_path,CFile::modeCreate);
-		last_storage_num=0; setting_frame=3;
+		last_storage_num=0; setting_frame=2;
 		file.Close();
 		give_data0();
 	}

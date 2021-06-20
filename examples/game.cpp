@@ -1,40 +1,40 @@
 //CString str; str.Format("%d",); MessageBox(str,MB_OK);
 //game.cpp
 #include "stdafx.h"
-#include "å¤§å­¦è½»æ¾ä¹ˆ.h"
+#include "´óÑ§ÇáËÉÃ´.h"
 #include "MAINDlg.h"
 
-void CMAINDlg::game_initialization(int x)   //åº”å°†æ‰€æœ‰å˜é‡ç”±ä»£ç æˆ–å­˜æ¡£èµ‹å€¼ä¸€éï¼Œä¸èƒ½ç”¨åŸå€¼ï¼
+void CMAINDlg::game_initialization(int x)   //Ó¦½«ËùÓĞ±äÁ¿ÓÉ´úÂë»ò´æµµ¸³ÖµÒ»±é£¬²»ÄÜÓÃÔ­Öµ£¡
 {
 	window=2;
-	//â‘ æ¸…ç†åŸæœ‰è®¡æ—¶å™¨ â‘¡è¯»å–å­˜æ¡£å˜é‡ â‘¢ä¿å­˜å½“å‰æ¡£æ¡ˆåºå·
-	if(x==0)  //x=0è¡¨ç¤ºç¬¬ä¸€æ¬¡ç©æ¸¸æˆï¼Œæ²¡æœ‰å­˜æ¡£
+	//¢ÙÇåÀíÔ­ÓĞ¼ÆÊ±Æ÷ ¢Ú¶ÁÈ¡´æµµ±äÁ¿ ¢Û±£´æµ±Ç°µµ°¸ĞòºÅ
+	if(x==0)  //x=0±íÊ¾µÚÒ»´ÎÍæÓÎÏ·£¬Ã»ÓĞ´æµµ
 	{
 		KillTimer(1);
 		if(last_storage_num==0)
 		{
-			last_storage_num=1; give_data0();  //å°†æ”¹å˜çš„last_storage_numå­˜å…¥zzz.dat
+			last_storage_num=1; give_data0();  //½«¸Ä±äµÄlast_storage_num´æÈëzzz.dat
 			get_data1(1);
 		}
 		else{
 			for(int i=1;i<=3;i++){ if(last_storage_num==i)get_data1(i); }
 		}
 	}
-	else{ //xè¡¨ç¤ºç¬¬xä¸ªå­˜æ¡£
+	else{ //x±íÊ¾µÚx¸ö´æµµ
 		last_storage_num=x; give_data0();
 		get_data1(x);
 	}
-	//åˆå§‹åŒ–äº‹ä»¶å˜é‡
+	//³õÊ¼»¯ÊÂ¼ş±äÁ¿
 	story_num=-1;
 	story_scene=-1;
 	story_information_initialization(-1);
 	for(int i=0;i<200;i++)show[i]=false;
 	last_choice=1;
-	//åˆå§‹åŒ–ç»˜å›¾å˜é‡
+	//³õÊ¼»¯»æÍ¼±äÁ¿
 	ismove=false; mapx=-445; mapy=-865; downpointx=0; downpointy=0; downmapx=0; downmapy=0;
 	game_t11_enter=0; game_t11_gantan=0; game_t11_pic=0;
 	SetTimer(11,60,NULL);
-	//å¼€å§‹
+	//¿ªÊ¼
 	find_story();
 }
 
@@ -42,14 +42,14 @@ void CMAINDlg::game_paint()
 {
 	if(show[0])
 	{
-		draw_bmp2(0,0,0,0,150+game_t11_enter*6,150+game_t11_enter*6,150+game_t11_enter*6);
-		if(game_t11_enter==10)
+		draw_bmp2(0,0,0,0,230-game_t11_enter*4,230-game_t11_enter*4,230-game_t11_enter*4);
+		if(game_t11_enter>=12&&!show[2])
 		{
 			char* c1=new char;
 			draw_bmp1(judge_pic(story[story_num].pic),0,0,1);
 			//draw_bmp1(6141,85,580,1);
-			if(story_scene%2==0)text1("æ¥·ä½“",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
-			else text1("æ¥·ä½“",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
+			if(story_scene%2==0)text1("¿¬Ìå",18,42,1400,0,0,0,0,670,1500,1000,w1(c1));
+			else text1("¿¬Ìå",18,42,1400,0,0,0,0,670,1500,1000,w1(c1));
 			delete[] c1;
 		}
 	}
@@ -61,7 +61,7 @@ void CMAINDlg::game_paint()
 		draw_bmp1(6105,330,50,1);
 		draw_bmp1(6106,1360,850,1);
 		draw_bmp2(453,74,3*energy,35,255,0,0);
-		for(int i=1;i<=sum_position;i++)  //æš‚å®šåœ°ç‚¹æ•°
+		for(int i=1;i<=sum_position;i++)  //Ôİ¶¨µØµãÊı
 		{
 			if(show[100+i])
 			{
@@ -94,21 +94,21 @@ void CMAINDlg::game_paint()
 
 void CMAINDlg::game_lb()
 {
-	if(show[0]&&game_t11_enter==10)
+	if(show[0]&&game_t11_enter>=20)
 	{
 		if(story[story_num].choice_scene!=story_scene)
 		{
 			if(story_scene<story[story_num].max_scene)story_scene++;
-			else {show[2]=true;}
+			else if(game_t11_enter==30){show[2]=true;}
 		}
 	}
 	if(show[11])
 	{
-		for(int i=1;i<=sum_position;i++) //æš‚å®šåœ°ç‚¹æ•°
+		for(int i=1;i<=sum_position;i++) //Ôİ¶¨µØµãÊı
 		{
 			if(re_position[i].PtInRect(mpt)&&show[100+i])
 			{
-				for(int j=0;j<sum_story;j++)   //æš‚æ—¶å‰§æƒ…æ•°
+				for(int j=0;j<sum_story;j++)   //ÔİÊ±¾çÇéÊı
 				{
 					if(day==story[j].day&&story[j].state==1&&story[j].position==i){load_story(j);return;}
 				}
@@ -118,14 +118,12 @@ void CMAINDlg::game_lb()
 		{
 			show[11]=false; show[12]=true; ismove=false;
 		}
-		//è‹¥æ— å…¶ä»–æŒ‰é”®è¢«é€‰ä¸­
+		//ÈôÎŞÆäËû°´¼ü±»Ñ¡ÖĞ
 		if(setting_frame==3){downpointx=mpt.x; downpointy=mpt.y; downmapx=mapx; downmapy=mapy; ismove=true;}
 	}
 	if(show[12])
 	{
-		//if(re_bmp[108].PtInRect(mpt)){show[21]=true; show[12]=false;}
-		CRect back(1350,475,1400,525);
-		if(back.PtInRect(mpt)){show[12]=false; show[11]=true; find_story();}
+		if(re_bmp[108].PtInRect(mpt)){show[21]=true; show[12]=false;}
 	}
 }
 
@@ -152,14 +150,14 @@ void CMAINDlg::game_timer1()
 {
 	if(show[0])
 	{
-		if(show[1]) //è¿›å…¥å‰§æƒ…æ—¶
+		if(show[1]) //½øÈë¾çÇéÊ±
 		{
-			if(game_t11_enter<10){game_t11_enter++;}
-			else if(game_t11_enter==10){show[1]=false;}
+			if(game_t11_enter<30){game_t11_enter++;}
+			else if(game_t11_enter==30){show[1]=false;}
 		}
-		if(show[2]) //é€€å‡ºå‰§æƒ…æ—¶
+		if(show[2])  //ÍË³ö¾çÇéÊ±
 		{
-			if(game_t11_enter>3)game_t11_enter--;
+			if(game_t11_enter>20)game_t11_enter--;
 			else
 			{
 				game_t11_enter=0;
@@ -186,7 +184,7 @@ void CMAINDlg::game_cursor()
 	}
 	else if(show[11])
 	{
-		for(int i=1;i<=sum_position;i++)  //æš‚å®šåœ°ç‚¹æ•°
+		for(int i=1;i<=sum_position;i++)  //Ôİ¶¨µØµãÊı
 		{
 			if(show[100+i])
 			{
@@ -198,7 +196,6 @@ void CMAINDlg::game_cursor()
 	else if(show[12])
 	{
 		for(int i=0;i<5;i++){ if(re_bmp[108+i].PtInRect(mpt))num=1; }
-		CRect back(1340,465,1410,535);  if(back.PtInRect(mpt)){num=1;}
 	}
 	if(num==1)SetCursor(cursor_hand);
 	else if(num==2)SetCursor(cursor_redhand);

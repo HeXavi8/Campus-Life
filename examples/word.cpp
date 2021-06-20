@@ -1,5 +1,4 @@
-﻿
-//word.cpp
+﻿//word.cpp
 #include "stdafx.h"
 #include "大学轻松么.h"
 #include "MAINDlg.h"

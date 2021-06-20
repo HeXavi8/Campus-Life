@@ -1,40 +1,40 @@
 //CString str; str.Format("%d",); MessageBox(str,MB_OK);
 //game.cpp
 #include "stdafx.h"
-#include "´óÑ§ÇáËÉÃ´.h"
+#include "å¤§å­¦è½»æ¾ä¹ˆ.h"
 #include "MAINDlg.h"
 
-void CMAINDlg::game_initialization(int x)   //Ó¦½«ËùÓĞ±äÁ¿ÓÉ´úÂë»ò´æµµ¸³ÖµÒ»±é£¬²»ÄÜÓÃÔ­Öµ£¡
+void CMAINDlg::game_initialization(int x)   //åº”å°†æ‰€æœ‰å˜é‡ç”±ä»£ç æˆ–å­˜æ¡£èµ‹å€¼ä¸€éï¼Œä¸èƒ½ç”¨åŸå€¼ï¼
 {
 	window=2;
-	//¢ÙÇåÀíÔ­ÓĞ¼ÆÊ±Æ÷ ¢Ú¶ÁÈ¡´æµµ±äÁ¿ ¢Û±£´æµ±Ç°µµ°¸ĞòºÅ
-	if(x==0)  //x=0±íÊ¾µÚÒ»´ÎÍæÓÎÏ·£¬Ã»ÓĞ´æµµ
+	//â‘ æ¸…ç†åŸæœ‰è®¡æ—¶å™¨ â‘¡è¯»å–å­˜æ¡£å˜é‡ â‘¢ä¿å­˜å½“å‰æ¡£æ¡ˆåºå·
+	if(x==0)  //x=0è¡¨ç¤ºç¬¬ä¸€æ¬¡ç©æ¸¸æˆï¼Œæ²¡æœ‰å­˜æ¡£
 	{
 		KillTimer(1);
 		if(last_storage_num==0)
 		{
-			last_storage_num=1; give_data0();  //½«¸Ä±äµÄlast_storage_num´æÈëzzz.dat
+			last_storage_num=1; give_data0();  //å°†æ”¹å˜çš„last_storage_numå­˜å…¥zzz.dat
 			get_data1(1);
 		}
 		else{
 			for(int i=1;i<=3;i++){ if(last_storage_num==i)get_data1(i); }
 		}
 	}
-	else{ //x±íÊ¾µÚx¸ö´æµµ
+	else{ //xè¡¨ç¤ºç¬¬xä¸ªå­˜æ¡£
 		last_storage_num=x; give_data0();
 		get_data1(x);
 	}
-	//³õÊ¼»¯ÊÂ¼ş±äÁ¿
+	//åˆå§‹åŒ–äº‹ä»¶å˜é‡
 	story_num=-1;
 	story_scene=-1;
 	story_information_initialization(-1);
 	for(int i=0;i<200;i++)show[i]=false;
 	last_choice=1;
-	//³õÊ¼»¯»æÍ¼±äÁ¿
+	//åˆå§‹åŒ–ç»˜å›¾å˜é‡
 	ismove=false; mapx=-445; mapy=-865; downpointx=0; downpointy=0; downmapx=0; downmapy=0;
 	game_t11_enter=0; game_t11_gantan=0; game_t11_pic=0;
 	SetTimer(11,60,NULL);
-	//¿ªÊ¼
+	//å¼€å§‹
 	find_story();
 }
 
@@ -48,8 +48,8 @@ void CMAINDlg::game_paint()
 			char* c1=new char;
 			draw_bmp1(judge_pic(story[story_num].pic),0,0,1);
 			//draw_bmp1(6141,85,580,1);
-			if(story_scene%2==0)text1("¿¬Ìå",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
-			else text1("¿¬Ìå",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
+			if(story_scene%2==0)text1("æ¥·ä½“",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
+			else text1("æ¥·ä½“",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
 			delete[] c1;
 		}
 	}
@@ -61,7 +61,7 @@ void CMAINDlg::game_paint()
 		draw_bmp1(6105,330,50,1);
 		draw_bmp1(6106,1360,850,1);
 		draw_bmp2(453,74,3*energy,35,255,0,0);
-		for(int i=1;i<=sum_position;i++)  //Ôİ¶¨µØµãÊı
+		for(int i=1;i<=sum_position;i++)  //æš‚å®šåœ°ç‚¹æ•°
 		{
 			if(show[100+i])
 			{
@@ -104,11 +104,11 @@ void CMAINDlg::game_lb()
 	}
 	if(show[11])
 	{
-		for(int i=1;i<=sum_position;i++) //Ôİ¶¨µØµãÊı
+		for(int i=1;i<=sum_position;i++) //æš‚å®šåœ°ç‚¹æ•°
 		{
 			if(re_position[i].PtInRect(mpt)&&show[100+i])
 			{
-				for(int j=0;j<sum_story;j++)   //ÔİÊ±¾çÇéÊı
+				for(int j=0;j<sum_story;j++)   //æš‚æ—¶å‰§æƒ…æ•°
 				{
 					if(day==story[j].day&&story[j].state==1&&story[j].position==i){load_story(j);return;}
 				}
@@ -118,7 +118,7 @@ void CMAINDlg::game_lb()
 		{
 			show[11]=false; show[12]=true; ismove=false;
 		}
-		//ÈôÎŞÆäËû°´¼ü±»Ñ¡ÖĞ
+		//è‹¥æ— å…¶ä»–æŒ‰é”®è¢«é€‰ä¸­
 		if(setting_frame==3){downpointx=mpt.x; downpointy=mpt.y; downmapx=mapx; downmapy=mapy; ismove=true;}
 	}
 	if(show[12])
@@ -152,12 +152,12 @@ void CMAINDlg::game_timer1()
 {
 	if(show[0])
 	{
-		if(show[1]) //½øÈë¾çÇéÊ±
+		if(show[1]) //è¿›å…¥å‰§æƒ…æ—¶
 		{
 			if(game_t11_enter<10){game_t11_enter++;}
 			else if(game_t11_enter==10){show[1]=false;}
 		}
-		if(show[2]) //ÍË³ö¾çÇéÊ±
+		if(show[2]) //é€€å‡ºå‰§æƒ…æ—¶
 		{
 			if(game_t11_enter>3)game_t11_enter--;
 			else
@@ -186,7 +186,7 @@ void CMAINDlg::game_cursor()
 	}
 	else if(show[11])
 	{
-		for(int i=1;i<=sum_position;i++)  //Ôİ¶¨µØµãÊı
+		for(int i=1;i<=sum_position;i++)  //æš‚å®šåœ°ç‚¹æ•°
 		{
 			if(show[100+i])
 			{

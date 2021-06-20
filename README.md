@@ -1,17 +1,15 @@
 # Campus-Life 
 C++ game about university campus life. 
-Chinese version of 
+Chinese version of introduction, please refer to [中文介绍](https://github.com/HeXavi8/Campus-Life/tree/main/%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D)
+
 ## Table of Contents
 
 * [Introduction](#Introduction)
 * [Development purpose](#Development)
-
 * [Installation](#Installation)
 * [Examples](#Examples)
-  
 * [Operation instructions](#Operation)
 * [Game Screenshot](#Screenshot)
-
 * [License](#License)
 
 

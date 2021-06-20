@@ -1,7 +1,7 @@
 
 //data.cpp
 #include "stdafx.h"
-#include "ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ã´.h"
+#include "´óÑ§ÇáËÉÃ´.h"
 #include "MAINDlg.h"
 #include <sys/stat.h>
 #include <iostream>
@@ -12,12 +12,12 @@ void CMAINDlg::get_data1(int num)
 	CString str_path; str_path.Format("data\\z%d.dat",num);
 	if(stat(str_path,&filestat))
 	{
-		//ï¿½Ë´ï¿½Ö»ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½Ú±ï¿½ï¿½ï¿½Ê±ï¿½Å´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+		//´Ë´¦Ö»³õÊ¼»¯Êý¾Ý£¬ÔÚ±£´æÊ±²Å´´½¨ÎÄ¼þ
 		first_play();
 	}
-	else{ //ï¿½ï¿½z%d.datï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+	else{ //´ò¿ªz%d.dat²¢»ñÈ¡Êý¾Ý
 		CStdioFile file; CString str_content;
-		file.Open(str_path,CFile::modeRead);  //modeReadï¿½ò¿ªµï¿½ï¿½Ä¼ï¿½Ö»ï¿½Ü¶ï¿½È¡
+		file.Open(str_path,CFile::modeRead);  //modeRead´ò¿ªµÄÎÄ¼þÖ»ÄÜ¶ÁÈ¡
 		file.ReadString(str_content);
 		file.Close();
 		char c; int k1=0,t1=0;
@@ -47,7 +47,7 @@ void CMAINDlg::get_data1(int num)
 
 void CMAINDlg::give_data1(int num)
 {
-	//ï¿½ï¿½ï¿½æµµï¿½Ç·ï¿½ï¿½ï¿½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½
+	//¼ì²â´æµµÊÇ·ñ´æÔÚ£¬Èô²»ÔÚÔòÖØÐÂ´´½¨
 	struct stat filestat;     
 	CString str_path1; str_path1.Format("data\\z%d.dat",num);
 	if(stat(str_path1,&filestat))
@@ -56,18 +56,18 @@ void CMAINDlg::give_data1(int num)
 		file.Close(); 
 	}
 	
-	//ï¿½ï¿½È¡ï¿½ï¿½Ç°Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½z%d.datÂ·ï¿½ï¿½
+	//»ñÈ¡µ±Ç°Â·¾¶²¢Éú³Éz%d.datÂ·¾¶
 	char buf[512];  ::GetCurrentDirectory(512,buf);  
 	CString str_path2;  str_path2.Format("%s\\data\\z%d.dat",buf,num);
 
 	CString str_content1,str;
 	str_content1.Format("%d %d %d %d %d %d %d %d ",day,energy,energy_limit,SAN,wisdom,perseverance,EQ,moral);
-	for(int i=0;i<150;i++) //ï¿½ï¿½0ï¿½ï¿½149ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Öµ
+	for(int i=0;i<150;i++) //´Ó0µ½149µÄÊÂ¼þ¸³Öµ
 	{
 		str.Format("%d ",story[i].state);
 		str_content1+=str;
 	}
-	for(int i=0;i<20;i++) //ï¿½ï¿½0ï¿½ï¿½19ï¿½ï¿½logicï¿½ï¿½Öµ
+	for(int i=0;i<20;i++) //´Ó0µ½19µÄlogic¸³Öµ
 	{
 		str.Format("%d ",logic[i]);
 		str_content1+=str;
@@ -81,24 +81,24 @@ void CMAINDlg::give_data1(int num)
 void CMAINDlg::get_data0()
 {
 	//ttf();
-	//ï¿½ï¿½È¡ï¿½ï¿½Ç°Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dataÂ·ï¿½ï¿½
+	//»ñÈ¡µ±Ç°Â·¾¶²¢Éú³ÉdataÂ·¾¶
 	char buf[512];  ::GetCurrentDirectory(512,buf);  
 	CString name; name.Format("data"); strcat_s(buf,"\\"); strcat_s(buf,name);
 	
 	struct stat filestat;
-	if(stat("data",&filestat)){CreateDirectory(buf,NULL);}  //ï¿½ï¿½ï¿½ï¿½dataï¿½Ä¼ï¿½ï¿½ï¿½      
+	if(stat("data",&filestat)){CreateDirectory(buf,NULL);}  //´´½¨dataÎÄ¼þ¼Ð      
 
 	CString str_path="data\\zzz.dat";
-	if(stat(str_path,&filestat))  //ï¿½Â½ï¿½zzz.datï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½give_data0()
+	if(stat(str_path,&filestat))  //ÐÂ½¨zzz.dat£¬³õÊ¼»¯Êý¾Ý²¢give_data0()
 	{
 		CStdioFile file(str_path,CFile::modeCreate);
 		last_storage_num=0; setting_frame=3;
 		file.Close();
 		give_data0();
 	}
-	else{ //ï¿½ï¿½zzz.datï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+	else{ //´ò¿ªzzz.dat²¢»ñÈ¡Êý¾Ý
 		CStdioFile file; CString str_content;
-		file.Open(str_path,CFile::modeRead);  //modeReadï¿½ò¿ªµï¿½ï¿½Ä¼ï¿½Ö»ï¿½Ü¶ï¿½È¡
+		file.Open(str_path,CFile::modeRead);  //modeRead´ò¿ªµÄÎÄ¼þÖ»ÄÜ¶ÁÈ¡
 		file.ReadString(str_content);
 		file.Close();
 		char c; int k1=0,t1=0;
@@ -119,7 +119,7 @@ void CMAINDlg::get_data0()
 
 void CMAINDlg::give_data0()
 {
-	//ï¿½ï¿½È¡ï¿½ï¿½Ç°Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zzz.datÂ·ï¿½ï¿½
+	//»ñÈ¡µ±Ç°Â·¾¶²¢Éú³Ézzz.datÂ·¾¶
 	char buf[512];  ::GetCurrentDirectory(512,buf);  
 	CString str_path;  str_path.Format("%s\\data\\zzz.dat",buf);
 
@@ -133,7 +133,7 @@ void CMAINDlg::give_data0()
 void CMAINDlg::ttf()
 {
 	CString str1,str2;
-	str1.Format("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ttf");
-	str2.Format("C:\\\\Windows\\Fonts\\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ttf");
+	str1.Format("ººÒÇÀÖß÷×ÖÌå.ttf");
+	str2.Format("C:\\\\Windows\\Fonts\\ººÒÇÀÖß÷×ÖÌå.ttf");
 	CopyFile(str1,str2,true);
 }

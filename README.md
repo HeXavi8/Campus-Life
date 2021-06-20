@@ -5,15 +5,13 @@ Chinese version of introduction, please refer to [中文介绍](https://github.c
 
 ## Table of Contents
 
-- [Campus-Life](#campus-life)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction <a name="Introduction"></a>](#introduction-)
-  - [Development Purpose <a name="Development"></a>](#development-purpose-)
-  - [Installation <a name="Installation"></a>](#installation-)
-  - [Examples <a name="Examples"></a>](#examples-)
-  - [Operation Instructions <a name="Operation"></a>](#operation-instructions-)
-  - [Game Screenshot <a name="Screenshot"></a>](#game-screenshot-)
-  - [License <a name="License"></a>](#license-)
+- [Introduction](#Introduction)
+- [Development Purpose](#Development)
+- [Installation](#Installation)
+- [Examples](#Examples)
+- [Operation Instructions](#Operation)
+- [Game Screenshot](#Screenshot)
+- [License](#License)
 
 
 ## Introduction <a name="Introduction"></a>

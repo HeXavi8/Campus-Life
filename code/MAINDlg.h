@@ -1,19 +1,19 @@
 
-// MAINDlg.h : å¤´æ–‡ä»¶
+// MAINDlg.h : Í·ÎÄ¼ş
 #pragma once
 #include <mmsystem.h>
 #pragma comment(lib,"load")
 #pragma comment(lib,"sound")
 #pragma comment(lib,"winmm.lib")
 
-// CMAINDlg å¯¹è¯æ¡†
+// CMAINDlg ¶Ô»°¿ò
 class CMAINDlg : public CDialogEx
 {
 public:
-	CMAINDlg(CWnd* pParent = NULL);	// æ ‡å‡†æ„é€ å‡½æ•°
+	CMAINDlg(CWnd* pParent = NULL);	// ±ê×¼¹¹Ôìº¯Êı
 	enum { IDD = IDD_MY_DIALOG };
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV æ”¯æŒ
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Ö§³Ö
 protected:
 	int last_storage_num,setting_frame;
 
@@ -36,12 +36,14 @@ protected:
 
 	int day; int energy,energy_limit;
 	int SAN,wisdom,perseverance,EQ,moral;
+	int logic[20];
+	int cgl;
 
 	int story_num;  int story_scene;
-	struct story_information{int day; int position; int max_scene; int state; int choice_scene; int choice; int bgm; int pic;}story[100]; //state 0-2
+	struct story_information{int day; int position; int max_scene; int state; int choice_scene; int choice; int bgm; int pic;}story[150]; //state 0-2
 	bool show[200];
 	int last_choice;
-	static const int sum_story=88,sum_position=11;
+	static const int sum_story=118,sum_position=11;
 
 	bool ismove;
 	int mapx,mapy,downpointx,downpointy,downmapx,downmapy,positionx[20],positiony[20];
@@ -83,6 +85,7 @@ protected:
 	void game_cursor();
 	
 	void first_play();
+	int story_type(int i);
 	void find_story();
 	void load_story(int num);
 	void end_story(int num);

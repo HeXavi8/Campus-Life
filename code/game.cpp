@@ -42,14 +42,14 @@ void CMAINDlg::game_paint()
 {
 	if(show[0])
 	{
-		draw_bmp2(0,0,0,0,230-game_t11_enter*4,230-game_t11_enter*4,230-game_t11_enter*4);
-		if(game_t11_enter>=12&&!show[2])
+		draw_bmp2(0,0,0,0,150+game_t11_enter*6,150+game_t11_enter*6,150+game_t11_enter*6);
+		if(game_t11_enter==10)
 		{
 			char* c1=new char;
 			draw_bmp1(judge_pic(story[story_num].pic),0,0,1);
 			//draw_bmp1(6141,85,580,1);
-			if(story_scene%2==0)text1("楷体",18,42,1400,0,0,0,0,670,1500,1000,w1(c1));
-			else text1("楷体",18,42,1400,0,0,0,0,670,1500,1000,w1(c1));
+			if(story_scene%2==0)text1("楷体",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
+			else text1("楷体",17,40,1400,0,0,0,0,665,1500,1000,w1(c1));
 			delete[] c1;
 		}
 	}
@@ -94,12 +94,12 @@ void CMAINDlg::game_paint()
 
 void CMAINDlg::game_lb()
 {
-	if(show[0]&&game_t11_enter>=20)
+	if(show[0]&&game_t11_enter==10)
 	{
 		if(story[story_num].choice_scene!=story_scene)
 		{
 			if(story_scene<story[story_num].max_scene)story_scene++;
-			else if(game_t11_enter==30){show[2]=true;}
+			else {show[2]=true;}
 		}
 	}
 	if(show[11])
@@ -123,7 +123,9 @@ void CMAINDlg::game_lb()
 	}
 	if(show[12])
 	{
-		if(re_bmp[108].PtInRect(mpt)){show[21]=true; show[12]=false;}
+		//if(re_bmp[108].PtInRect(mpt)){show[21]=true; show[12]=false;}
+		CRect back(1350,475,1400,525);
+		if(back.PtInRect(mpt)){show[12]=false; show[11]=true; find_story();}
 	}
 }
 
@@ -152,12 +154,12 @@ void CMAINDlg::game_timer1()
 	{
 		if(show[1]) //进入剧情时
 		{
-			if(game_t11_enter<30){game_t11_enter++;}
-			else if(game_t11_enter==30){show[1]=false;}
+			if(game_t11_enter<10){game_t11_enter++;}
+			else if(game_t11_enter==10){show[1]=false;}
 		}
-		if(show[2])  //退出剧情时
+		if(show[2]) //退出剧情时
 		{
-			if(game_t11_enter>20)game_t11_enter--;
+			if(game_t11_enter>3)game_t11_enter--;
 			else
 			{
 				game_t11_enter=0;
@@ -196,6 +198,7 @@ void CMAINDlg::game_cursor()
 	else if(show[12])
 	{
 		for(int i=0;i<5;i++){ if(re_bmp[108+i].PtInRect(mpt))num=1; }
+		CRect back(1340,465,1410,535);  if(back.PtInRect(mpt)){num=1;}
 	}
 	if(num==1)SetCursor(cursor_hand);
 	else if(num==2)SetCursor(cursor_redhand);

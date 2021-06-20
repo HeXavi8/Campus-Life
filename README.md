@@ -5,13 +5,13 @@ Chinese version of introduction, please refer to [中文介绍](https://github.c
 
 ## Table of Contents
 
-* [Introduction](#Introduction)
-* [Development Purpose](#Development)
-* [Installation](#Installation)
-* [Examples](#Examples)
-* [Operation Instructions](#Operation)
-* [Game Screenshot](#Screenshot)
-* [License](#License)
+- [Introduction](#Introduction)
+- [Development Purpose](#Development)
+- [Installation](#Installation)
+- [Examples](#Examples)
+- [Operation Instructions](#Operation)
+- [Game Screenshot](#Screenshot)
+- [License](#License)
 
 
 ## Introduction <a name="Introduction"></a>
@@ -43,6 +43,9 @@ Open the folder of "Debug", click "大学轻松么.exe" to start the game.</br>
 * [game.cpp](examples/game.cpp)
 * [storage.cpp](examples/storage.cpp)
 * [word.cpp](examples/word.cpp)
+* [data.cpp](examples/data.cpp)
+* [sound.cpp](examples/sound.cpp)
+* [MAINDlg.h](examples/MAINDlg.h)
 
 ## Operation Instructions <a name="Operation"></a>
 Press F2 to go to next week </br>

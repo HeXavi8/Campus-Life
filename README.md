@@ -17,7 +17,7 @@ Chinese version of introduction, please refer to [中文介绍](https://github.c
 
 
 ## Introduction <a name="Introduction"></a>
-Campus-Life is a dialog-based MFC application,developed in the environment of Microsoft Visual Studio 2010, using static library MFC and several dynamic link libraries, which finished in two months. </br>
+Campus-Life is a dialog-based MFC application, developed in the environment of Microsoft Visual Studio 2010, using static library MFC and several dynamic link libraries, which finished in two months. </br>
 The software prototype contains: </br>
 Exe </br>
 load.dll</br>

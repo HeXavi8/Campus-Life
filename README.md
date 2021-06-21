@@ -1,5 +1,5 @@
 # Campus-Life 
-C++ game about university campus life. 
+Campus-Life is a game of education simulation of the C++ programming language, and its object is to help players learn more about or reminisce university life.
 
 Chinese version of introduction, please refer to [中文介绍](https://github.com/HeXavi8/Campus-Life/tree/main/%E4%B8%AD%E6%96%87%E4%BB%8B%E7%BB%8D).
 

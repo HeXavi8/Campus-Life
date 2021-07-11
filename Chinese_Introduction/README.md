@@ -1,3 +1,5 @@
+### [English](https://github.com/HeXavi8/Campus-Life) | 中文
+
 # 大学轻松么
 《大学轻松么》是一款基于c++编程语言的教育模拟游戏，其目的是帮助玩家更多地了解或回忆大学生活。
 

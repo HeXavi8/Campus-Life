@@ -1,10 +1,16 @@
 ### English | [中文](./Chinese_Introduction)
+
 # Campus-Life 
 Campus-Life is a game of education simulation of the C++ programming language, and its object is to help players learn more about or reminisce university life.
 
 ## Table of Contents
-
-
+- [Introduction](#Introduction)
+- [Development Purpose](#Development)
+- [Installation](#Installation)
+- [Examples](#Examples)
+- [Operation Instructions](#Operation)
+- [Game Screenshot](#Screenshot)
+- [License](#License)
 
 
 ## Introduction <a name="Introduction"></a>

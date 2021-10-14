@@ -3,7 +3,14 @@
 # Campus-Life 
 Campus-Life is a game of education simulation of the C++ programming language, and its object is to help players learn more about or reminisce about university life.
 
-
+## Table of Contents
+- [Introduction](#Introduction)
+- [Development Purpose](#Development)
+- [Installation](#Installation)
+- [Examples](#Examples)
+- [Operation Instructions](#Operation)
+- [Game Screenshot](#Screenshot)
+- [License](#License)
 
 ## Introduction <a name="Introduction"></a>
 Campus-Life is a dialog-based MFC application, developed in the environment of Microsoft Visual Studio 2010, using static library MFC and several dynamic link libraries, which finished in two months. </br>

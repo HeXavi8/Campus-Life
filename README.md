@@ -1,16 +1,8 @@
 ### English | [中文](./Chinese_Introduction)
 
 # Campus-Life 
-Campus-Life is a game of education simulation of the C++ programming language, and its object is to help players learn more about or reminisce university life.
+Campus-Life is a game of education simulation of the C++ programming language, and its object is to help players learn more about or reminisce about university life.
 
-## Table of Contents
-- [Introduction](#Introduction)
-- [Development Purpose](#Development)
-- [Installation](#Installation)
-- [Examples](#Examples)
-- [Operation Instructions](#Operation)
-- [Game Screenshot](#Screenshot)
-- [License](#License)
 
 
 ## Introduction <a name="Introduction"></a>
@@ -30,13 +22,13 @@ Z3.dat (File 3) </br>
 
 Campus-Life is a ”realistic“ game. </br>
 In China, high school teachers often told us: "When you get to university, life will be more 'easier' than that in high school." </br>
-Taking this as a starting point, this game, as a small sample, will simply show the whole process of undergraduates from admission to graduation. With more elements of "college life", the game will describe the growth story of undergraduates, as well as their understanding and perception of college life. </br>
-We hope to let the players who will go to college know what the college life is, let the players who are now in the college have a clearer understanding of the college life, let the players who have graduated for many years recall their college time. </br>
-Of course, this idea is a bit fanciful and too ambitious hahahahaha. Well, this is just a small project done by a group of freshmen who just learned C++, but it can be regarded as our little attempt. </br>
+Taking this as a starting point, this game, as a small sample, will show the whole process of undergraduates from admission to graduation. With more elements of "college life," the game will describe the growth story of undergraduates, as well as their understanding and perception of college life. </br>
+We hope to let the players who will go to college know what college life is, let the players who are now in college have a clearer understanding of college life, let the players who have graduated for many years recall their college time. </br>
+Of course, this idea is a bit fanciful and too ambitious, lol. Well, this is just a small project done by a group of freshmen who just learned C++, but it is our little attempt. </br>
 
 ## Installation <a name="Installation"></a>
-For the whole project please use baiduyun to download: https://pan.baidu.com/s/1Te6A2xpzcvmVWLcgUIlrxQ extraction code: 9mvo</br>
-Open the folder of "Debug", click "大学轻松么.exe" to start the game.</br>
+For the whole project, please use Baidu Cloud Disk to download: https://pan.baidu.com/s/1Te6A2xpzcvmVWLcgUIlrxQ extraction code: 9mvo</br>
+Open the folder of "Debug," click "大学轻松么.exe" to start the game.</br>
 
 ## Examples <a name="Examples"></a>
 * [game.cpp](/game.cpp)
